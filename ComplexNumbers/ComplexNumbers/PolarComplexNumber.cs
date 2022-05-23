@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComplexNumbers
 {
-    class PolarComplexNumber
+    public class PolarComplexNumber
     {
         public ComplexNumber Complex { get; set; }
         public double Arg { get; set; }
@@ -23,48 +23,69 @@ namespace ComplexNumbers
             this.Module = module;
         }
 
-        public void ArgCount()
+        public double ArgCount()
         {
             if (Complex.X > 0 && Complex.Y > 0)
-                this.Arg = Math.Atan(Complex.Y / Complex.X);
+                return Math.Atan(Complex.Y / Complex.X);
 
             else if (Complex.X > 0 && Complex.Y < 0)
-                this.Arg = -Math.Atan(Complex.Y / Complex.X);
+                return -Math.Atan(Complex.Y / Complex.X);
 
             else if (Complex.X < 0 && Complex.Y > 0)
-                this.Arg = Math.PI - Math.Atan(Complex.Y / Complex.X);
+                return Math.PI - Math.Atan(Complex.Y / Complex.X);
 
             else if (Complex.X < 0 && Complex.Y < 0)
-                this.Arg = -Math.PI + Math.Atan(Complex.Y / Complex.X);
+                return -Math.PI + Math.Atan(Complex.Y / Complex.X);
 
             else if (Complex.X == 0 && Complex.Y > 0)
-                this.Arg = Math.PI / 2;
+                return Math.PI / 2;
 
             else if (Complex.X == 0 && Complex.Y < 0)
-                this.Arg = -Math.PI / 2;
+                return -Math.PI / 2;
 
             else if (Complex.X > 0 && Complex.Y == 0)
-                this.Arg = 0;
+                return 0;
 
-            else if (Complex.X < 0 && Complex.Y == 0)
-                this.Arg = Math.PI;
+            else
+                return Math.PI;
+        }
+
+        public PolarComplexNumber ConvertToPolar()
+        {
+            return new PolarComplexNumber(ArgCount(), Complex.Module());
         }
 
         public PolarComplexNumber Exponentiation(int n)
         {
-            return new PolarComplexNumber(Math.Pow(this.Module, n), this.Arg * n);
+            return new PolarComplexNumber(this.Arg * n, Math.Pow(this.Module, n));
         }
 
-        public ICollection<PolarComplexNumber> Rooting(int n)
+        public List<PolarComplexNumber> Rooting(double n)
         {
-            ICollection<PolarComplexNumber> roots = new List<PolarComplexNumber>();
+            List<PolarComplexNumber> roots = new List<PolarComplexNumber>();
 
             for (int k = 0; k < n; k++)
             {
-                roots.Add(new PolarComplexNumber((this.Arg + 2 * k * Math.PI) / n, Math.Pow(this.Module, 1 / n)));
+                roots.Add(new PolarComplexNumber((this.Arg + 2 * k * Math.PI) / n, Math.Pow(this.Module, 1/n)));
             }
 
             return roots;
+        }
+
+        public string Print()
+        {
+            return $"z = {this.Module} * (cos{this.Arg} + i * sin{this.Arg})\r\n";
+        }
+
+        public string PrintList(List<PolarComplexNumber> roots)
+        {
+            string result = "";
+            foreach (PolarComplexNumber polar in roots)
+            {
+                result += $"{polar.Print()}";
+            }
+
+            return result;
         }
     }
 }

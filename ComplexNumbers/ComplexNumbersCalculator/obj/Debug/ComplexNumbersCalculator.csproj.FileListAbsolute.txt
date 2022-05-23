@@ -1,0 +1,13 @@
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbersCalculator.exe.config
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbersCalculator.exe
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbersCalculator.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbers.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbers.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csproj.AssemblyReference.cache
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.Calculator.resources
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.Properties.Resources.resources
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csproj.GenerateResource.cache
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csproj.CopyComplete
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.exe
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.pdb

@@ -44,5 +44,10 @@ namespace ComplexNumbers
         {
             return Math.Sqrt(Math.Pow(this.X, 2) + Math.Pow(this.Y, 2));
         }
+
+        public string Print()
+        {
+            return $"z = {this.X} + i * {this.Y}\r\n";
+        }
     }
 }
