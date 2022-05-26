@@ -23,6 +23,16 @@ namespace ComplexNumbers
             this.Module = module;
         }
 
+        public static PolarComplexNumber operator *(PolarComplexNumber num1, PolarComplexNumber num2)
+        {
+            return new PolarComplexNumber(num1.Arg + num2.Arg, num1.Module * num2.Module);
+        }
+
+        public static PolarComplexNumber operator /(PolarComplexNumber num1, PolarComplexNumber num2)
+        {
+            return new PolarComplexNumber(num1.Arg - num2.Arg, num1.Module / num2.Module);
+        }
+
         public double ArgCount()
         {
             if (Complex.X > 0 && Complex.Y > 0)

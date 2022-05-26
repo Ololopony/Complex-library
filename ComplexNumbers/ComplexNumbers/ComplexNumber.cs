@@ -10,12 +10,17 @@ namespace ComplexNumbers
     {
         public double X { get; set; }
         public double Y { get; set; }
-        public double Arg { get; set; }
+        public PolarComplexNumber Polar { get; set; }
 
         public ComplexNumber(double x, double y)
         {
             this.X = x;
             this.Y = y;
+        }
+
+        public ComplexNumber(PolarComplexNumber Polar)
+        {
+            this.Polar = Polar;
         }
 
         public static ComplexNumber operator +(ComplexNumber num1, ComplexNumber num2)
@@ -43,6 +48,14 @@ namespace ComplexNumbers
         public double Module()
         {
             return Math.Sqrt(Math.Pow(this.X, 2) + Math.Pow(this.Y, 2));
+        }
+
+        public ComplexNumber ConvertToDekart()
+        {
+            double x = Polar.Module * Math.Cos(Polar.Arg);
+            double y = Polar.Module * Math.Sin(Polar.Arg);
+
+            return new ComplexNumber(x, y);
         }
 
         public string Print()

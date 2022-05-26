@@ -1,0 +1,17 @@
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\nunit.engine.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\nunit.engine.api.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\nunit.engine.core.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\testcentric.engine.metadata.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\ComplexNumbersTests.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\ComplexNumbersTests.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\ComplexNumbers.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\nunit.framework.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\ComplexNumbers.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\nunit.framework.xml
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.csproj.AssemblyReference.cache
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.csproj.CoreCompileInputs.cache
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.csproj.CopyComplete
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.pdb
