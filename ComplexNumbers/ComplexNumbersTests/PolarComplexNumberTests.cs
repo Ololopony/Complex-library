@@ -40,7 +40,8 @@ namespace ComplexNumbersTests
         public void ArgCount1Test()
         {
             ComplexNumber num = new ComplexNumber(10, 5);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected =  Math.Atan(5 / 10.0);
             double actual = polNum.ArgCount();
 
@@ -51,7 +52,8 @@ namespace ComplexNumbersTests
         public void ArgCount2Test()
         {
             ComplexNumber num = new ComplexNumber(10, -5);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected = -Math.Atan(-5 / 10.0);
             double actual = polNum.ArgCount();
 
@@ -62,7 +64,8 @@ namespace ComplexNumbersTests
         public void ArgCount3Test()
         {
             ComplexNumber num = new ComplexNumber(-10, 5);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected = Math.PI - Math.Atan(5 / -10.0);
             double actual = polNum.ArgCount();
 
@@ -73,7 +76,8 @@ namespace ComplexNumbersTests
         public void ArgCount4Test()
         {
             ComplexNumber num = new ComplexNumber(-10, -5);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected = - Math.PI + Math.Atan(-5 / -10.0);
             double actual = polNum.ArgCount();
 
@@ -84,7 +88,8 @@ namespace ComplexNumbersTests
         public void ArgCount5Test()
         {
             ComplexNumber num = new ComplexNumber(0, 5);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected = Math.PI / 2;
             double actual = polNum.ArgCount();
 
@@ -95,7 +100,8 @@ namespace ComplexNumbersTests
         public void ArgCount6Test()
         {
             ComplexNumber num = new ComplexNumber(0, -5);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected = -Math.PI / 2;
             double actual = polNum.ArgCount();
 
@@ -106,7 +112,8 @@ namespace ComplexNumbersTests
         public void ArgCount7Test()
         {
             ComplexNumber num = new ComplexNumber(10, 0);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected = 0;
             double actual = polNum.ArgCount();
 
@@ -117,7 +124,8 @@ namespace ComplexNumbersTests
         public void ArgCount8Test()
         {
             ComplexNumber num = new ComplexNumber(-10, 0);
-            PolarComplexNumber polNum = new PolarComplexNumber(num);
+            PolarComplexNumber polNum = new PolarComplexNumber();
+            polNum = num.ConvertToPolar();
             double expected = Math.PI;
             double actual = polNum.ArgCount();
 
@@ -125,14 +133,13 @@ namespace ComplexNumbersTests
         }
 
         [Test]
-        public void ConvertToPolarTest()
+        public void ConvertToDekartTest()
         {
-            PolarComplexNumber expected = new PolarComplexNumber(0.78539816339744828, 14.142135623730951);
+            PolarComplexNumber num = new PolarComplexNumber((2 * Math.PI) / 3, 206);
+            ComplexNumber expected = new ComplexNumber(-102.99999999999996, 178.40123317959439);
+            ComplexNumber actual = new ComplexNumber();
 
-            ComplexNumber num = new ComplexNumber(10, 10);
-            
-            PolarComplexNumber actual = new PolarComplexNumber(num);
-            actual = actual.ConvertToPolar();
+            actual = num.ConvertToDekart();
 
             expected.Should().BeEquivalentTo(actual);
         }
@@ -159,7 +166,7 @@ namespace ComplexNumbersTests
             expected.Add(new PolarComplexNumber((10 + 2 * Math.PI) / 3.0, Math.Pow(5, 1 / 3.0)));
             expected.Add(new PolarComplexNumber((10 + 4 * Math.PI)/ 3.0, Math.Pow(5, 1 / 3.0)));
 
-            List<PolarComplexNumber> actual = num.Rooting(3);
+            List<PolarComplexNumber> actual = num.Rooting(n);
 
             expected.Should().BeEquivalentTo(actual);
         }

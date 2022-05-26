@@ -66,19 +66,21 @@ namespace ComplexNumbersTests
             ComplexNumber num = new ComplexNumber(2, 3);
             
             double expected = 3.6055512754639892931192212674705;
-            double actual = num.Module();
+            double actual = num.Get_Module();
 
             Assert.AreEqual(expected, actual);
         }
 
+        
         [Test]
-        public void ConvertToDekartTest()
+        public void ConvertToPolarTest()
         {
-            PolarComplexNumber num = new PolarComplexNumber((2 * Math.PI) / 3, 206);
+            PolarComplexNumber expected = new PolarComplexNumber(0.78539816339744828, 14.142135623730951);
 
-            ComplexNumber expected = new ComplexNumber(-102.99999999999996, 178.40123317959439);
-            ComplexNumber actual = new ComplexNumber(num);
-            actual = actual.ConvertToDekart();
+            ComplexNumber num = new ComplexNumber(10, 10);
+
+            PolarComplexNumber actual = new PolarComplexNumber();
+            actual = num.ConvertToPolar();
 
             expected.Should().BeEquivalentTo(actual);
         }
