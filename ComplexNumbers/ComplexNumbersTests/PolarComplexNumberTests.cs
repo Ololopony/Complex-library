@@ -43,7 +43,7 @@ namespace ComplexNumbersTests
             PolarComplexNumber polNum = new PolarComplexNumber();
             polNum = num.ConvertToPolar();
             double expected =  Math.Atan(5 / 10.0);
-            double actual = polNum.ArgCount();
+            double actual = polNum.Arg;
 
             Assert.AreEqual(expected, actual);
         }
@@ -55,7 +55,7 @@ namespace ComplexNumbersTests
             PolarComplexNumber polNum = new PolarComplexNumber();
             polNum = num.ConvertToPolar();
             double expected = -Math.Atan(-5 / 10.0);
-            double actual = polNum.ArgCount();
+            double actual = polNum.Arg;
 
             Assert.AreEqual(expected, actual);
         }
@@ -67,7 +67,7 @@ namespace ComplexNumbersTests
             PolarComplexNumber polNum = new PolarComplexNumber();
             polNum = num.ConvertToPolar();
             double expected = Math.PI - Math.Atan(5 / -10.0);
-            double actual = polNum.ArgCount();
+            double actual = polNum.Arg;
 
             Assert.AreEqual(expected, actual);
         }
@@ -79,7 +79,7 @@ namespace ComplexNumbersTests
             PolarComplexNumber polNum = new PolarComplexNumber();
             polNum = num.ConvertToPolar();
             double expected = - Math.PI + Math.Atan(-5 / -10.0);
-            double actual = polNum.ArgCount();
+            double actual = polNum.Arg;
 
             Assert.AreEqual(expected, actual);
         }
@@ -91,7 +91,7 @@ namespace ComplexNumbersTests
             PolarComplexNumber polNum = new PolarComplexNumber();
             polNum = num.ConvertToPolar();
             double expected = Math.PI / 2;
-            double actual = polNum.ArgCount();
+            double actual = polNum.Arg;
 
             Assert.AreEqual(expected, actual);
         }
@@ -103,7 +103,7 @@ namespace ComplexNumbersTests
             PolarComplexNumber polNum = new PolarComplexNumber();
             polNum = num.ConvertToPolar();
             double expected = -Math.PI / 2;
-            double actual = polNum.ArgCount();
+            double actual = polNum.Arg;
 
             Assert.AreEqual(expected, actual);
         }
@@ -115,7 +115,7 @@ namespace ComplexNumbersTests
             PolarComplexNumber polNum = new PolarComplexNumber();
             polNum = num.ConvertToPolar();
             double expected = 0;
-            double actual = polNum.ArgCount();
+            double actual = polNum.Arg;
 
             Assert.AreEqual(expected, actual);
         }
