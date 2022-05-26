@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace ComplexNumbers
 {
-    public class PolarComplexNumber
+    public class PolarComplexNumber:ComplexNumber, ICloneable
     {
-        public ComplexNumber Complex { get; set; }
         public double Arg { get; set; }
         public double Module { get; set; }
-
-        public PolarComplexNumber(ComplexNumber Complex)
+        public PolarComplexNumber()
         {
-            this.Complex = Complex;
+            this.Arg = 0;
+            this.Module = 0;
         }
-
         public PolarComplexNumber(double arg, double module)
         {
             this.Arg = arg;
@@ -32,39 +30,13 @@ namespace ComplexNumbers
         {
             return new PolarComplexNumber(num1.Arg - num2.Arg, num1.Module / num2.Module);
         }
-
-        public double ArgCount()
+        public ComplexNumber ConvertToDekart()
         {
-            if (Complex.X > 0 && Complex.Y > 0)
-                return Math.Atan(Complex.Y / Complex.X);
+            double x = Module * Math.Cos(Arg);
+            double y = Module * Math.Sin(Arg);
 
-            else if (Complex.X > 0 && Complex.Y < 0)
-                return -Math.Atan(Complex.Y / Complex.X);
-
-            else if (Complex.X < 0 && Complex.Y > 0)
-                return Math.PI - Math.Atan(Complex.Y / Complex.X);
-
-            else if (Complex.X < 0 && Complex.Y < 0)
-                return -Math.PI + Math.Atan(Complex.Y / Complex.X);
-
-            else if (Complex.X == 0 && Complex.Y > 0)
-                return Math.PI / 2;
-
-            else if (Complex.X == 0 && Complex.Y < 0)
-                return -Math.PI / 2;
-
-            else if (Complex.X > 0 && Complex.Y == 0)
-                return 0;
-
-            else
-                return Math.PI;
+            return new ComplexNumber(x, y);
         }
-
-        public PolarComplexNumber ConvertToPolar()
-        {
-            return new PolarComplexNumber(ArgCount(), Complex.Module());
-        }
-
         public PolarComplexNumber Exponentiation(int n)
         {
             return new PolarComplexNumber(this.Arg * n, Math.Pow(this.Module, n));
@@ -82,7 +54,7 @@ namespace ComplexNumbers
             return roots;
         }
 
-        public string Print()
+        public new string Print()
         {
             return $"z = {this.Module} * (cos{this.Arg} + i * sin{this.Arg})\r\n";
         }
@@ -96,6 +68,10 @@ namespace ComplexNumbers
             }
 
             return result;
+        }
+        object ICloneable.Clone()
+        {
+            return new PolarComplexNumber(Arg, Module);
         }
     }
 }

@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace ComplexNumbers
 {
-    public class ComplexNumber
+    public class ComplexNumber: ICloneable
     {
         public double X { get; set; }
         public double Y { get; set; }
-        public PolarComplexNumber Polar { get; set; }
+        public ComplexNumber()
+        {
+            this.X = 0;
+            this.Y = 0;
+        }
 
         public ComplexNumber(double x, double y)
         {
             this.X = x;
             this.Y = y;
-        }
-
-        public ComplexNumber(PolarComplexNumber Polar)
-        {
-            this.Polar = Polar;
         }
 
         public static ComplexNumber operator +(ComplexNumber num1, ComplexNumber num2)
@@ -45,22 +44,50 @@ namespace ComplexNumbers
             return new ComplexNumber(xc, yc);
         }
 
-        public double Module()
+        public double Get_Module()
         {
             return Math.Sqrt(Math.Pow(this.X, 2) + Math.Pow(this.Y, 2));
         }
-
-        public ComplexNumber ConvertToDekart()
+        public double ArgCount()
         {
-            double x = Polar.Module * Math.Cos(Polar.Arg);
-            double y = Polar.Module * Math.Sin(Polar.Arg);
+            if (X > 0 && Y > 0)
+                return Math.Atan(Y / X);
 
-            return new ComplexNumber(x, y);
+            else if (X > 0 && Y < 0)
+                return -Math.Atan(Y / X);
+
+            else if (X < 0 && Y > 0)
+                return Math.PI - Math.Atan(Y / X);
+
+            else if (X < 0 && Y < 0)
+                return -Math.PI + Math.Atan(Y / X);
+
+            else if (X == 0 && Y > 0)
+                return Math.PI / 2;
+
+            else if (X == 0 && Y < 0)
+                return -Math.PI / 2;
+
+            else if (X > 0 && Y == 0)
+                return 0;
+
+            else
+                return Math.PI;
+        }
+
+        public PolarComplexNumber ConvertToPolar()
+        {
+            return new PolarComplexNumber(ArgCount(), Get_Module());
         }
 
         public string Print()
         {
             return $"z = {this.X} + i * {this.Y}\r\n";
+        }
+
+        public object Clone()
+        {
+            return new ComplexNumber(X, Y);
         }
     }
 }
