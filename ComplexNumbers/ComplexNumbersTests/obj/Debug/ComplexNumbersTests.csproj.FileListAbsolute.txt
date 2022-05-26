@@ -15,6 +15,7 @@ C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\
 C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.csproj.CopyComplete
 C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.dll
 C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.pdb
+<<<<<<< HEAD
 D:\Complex-library\ComplexNumbers\ComplexNumbersTests\bin\Debug\NUnit3.TestAdapter.dll
 D:\Complex-library\ComplexNumbers\ComplexNumbersTests\bin\Debug\NUnit3.TestAdapter.pdb
 D:\Complex-library\ComplexNumbers\ComplexNumbersTests\bin\Debug\nunit.engine.dll
@@ -39,3 +40,12 @@ D:\Complex-library\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTe
 D:\Complex-library\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.csproj.CopyComplete
 D:\Complex-library\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.dll
 D:\Complex-library\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.pdb
+=======
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\FluentAssertions.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\FluentAssertions.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\FluentAssertions.xml
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Threading.Tasks.Extensions.xml
+>>>>>>> 11cc58ea0e55a6b49a05e2d91e36252f8d6c72a4
