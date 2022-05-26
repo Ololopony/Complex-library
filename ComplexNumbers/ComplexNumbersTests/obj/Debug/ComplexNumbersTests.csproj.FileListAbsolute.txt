@@ -15,3 +15,10 @@ C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\
 C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.csproj.CopyComplete
 C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.dll
 C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\obj\Debug\ComplexNumbersTests.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\FluentAssertions.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\FluentAssertions.pdb
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\FluentAssertions.xml
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbersTests\bin\Debug\System.Threading.Tasks.Extensions.xml
