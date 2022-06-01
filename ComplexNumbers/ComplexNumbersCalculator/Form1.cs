@@ -315,9 +315,10 @@ namespace ComplexNumbersCalculator
 
             if (radioButtonDekart.Checked)
             {
+                tabControl1.Size = new Size(242, 231);
                 Module.Visible = true;
                 ConvToPolar.Visible = true;
-                Pass.Visible = false;
+                
 
                 PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textBox1.Text), double.Parse(textX1.Text));
                 PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textBox2.Text), double.Parse(textX2.Text));
@@ -397,9 +398,17 @@ namespace ComplexNumbersCalculator
 
             if (radioButtonPolar.Checked)
             {
+                if (tabControl1.SelectedTab == tabPage2)
+                {
+                    tabControl1.Size = new Size(242, 168);
+                }
+                else if (tabControl1.SelectedTab == tabPage1)
+                {
+                    tabControl1.Size = new Size(242, 231);
+                }
                 Module.Visible = false;
                 ConvToPolar.Visible = false;
-                Pass.Visible = true;
+                
 
                 ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
                 ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
@@ -483,6 +492,15 @@ namespace ComplexNumbersCalculator
         private void roundButton1_Click(object sender, EventArgs e)
         {
             Result.Text = "";
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            if (radioButtonDekart.Checked | (radioButtonPolar.Checked & tabControl1.SelectedTab == tabPage1))
+                tabControl1.Size = new Size(242, 231);
+
+            if (radioButtonPolar.Checked & tabControl1.SelectedTab == tabPage2)
+                tabControl1.Size = new Size(242, 168);
         }
     }
 }
