@@ -20,23 +20,47 @@ namespace ComplexNumbersCalculator
             textX2.BringToFront();
             textY1.BringToFront();
             textY2.BringToFront();
+            textX1.Text = "0"; textY1.Text = "0"; textBox1.Text = "0";
+            textX2.Text = "0"; textY2.Text = "0"; textBox2.Text = "0";
+            textX.Text = "0"; textY.Text = "0"; textBox3.Text = "0";
         }
 
         private void Plus_Click(object sender, EventArgs e)
         {
             try
             {
-                ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
-                ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
+                if (radioButtonDekart.Checked)
+                {
+                    ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
+                    ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
 
-                ComplexNumber res = num1 + num2;
+                    ComplexNumber res = num1 + num2;
 
-                Result.Text += num1.Print();
-                Result.Text += "+\r\n";
-                Result.Text += num2.Print();
-                Result.Text += "=\r\n";
-                Result.Text += res.Print();
-                Result.Text += "------------------\r\n";
+                    Result.Text += num1.Print();
+                    Result.Text += "+\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
+                else
+                {
+                    PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textX1.Text), double.Parse(textBox1.Text));
+                    PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textX2.Text), double.Parse(textBox2.Text));
+
+                    ComplexNumber num11 = new ComplexNumber();
+                    ComplexNumber num21 = new ComplexNumber();
+                    num11 = num1.ConvertToDekart();
+                    num21 = num2.ConvertToDekart();
+
+                    ComplexNumber res = num11 + num21;
+                    Result.Text += num1.Print();
+                    Result.Text += "+\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
             }
             catch (Exception)
             {
@@ -59,17 +83,38 @@ namespace ComplexNumbersCalculator
         {
             try
             {
-                ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
-                ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
+                if (radioButtonDekart.Checked)
+                {
+                    ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
+                    ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
 
-                ComplexNumber res = num1 - num2;
+                    ComplexNumber res = num1 - num2;
 
-                Result.Text += num1.Print();
-                Result.Text += "-\r\n";
-                Result.Text += num2.Print();
-                Result.Text += "=\r\n";
-                Result.Text += res.Print();
-                Result.Text += "------------------\r\n";
+                    Result.Text += num1.Print();
+                    Result.Text += "-\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
+                else
+                {
+                    PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textX1.Text), double.Parse(textBox1.Text));
+                    PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textX2.Text), double.Parse(textBox2.Text));
+
+                    ComplexNumber num11 = new ComplexNumber();
+                    ComplexNumber num21 = new ComplexNumber();
+                    num11 = num1.ConvertToDekart();
+                    num21 = num2.ConvertToDekart();
+
+                    ComplexNumber res = num11 - num21;
+                    Result.Text += num1.Print();
+                    Result.Text += "-\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
             }
             catch (Exception)
             {
@@ -93,17 +138,34 @@ namespace ComplexNumbersCalculator
         {
             try
             {
-                ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
-                ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
+                if (radioButtonDekart.Checked)
+                {
+                    ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
+                    ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
 
-                ComplexNumber res = num1 * num2;
+                    ComplexNumber res = num1 * num2;
 
-                Result.Text += num1.Print();
-                Result.Text += "*\r\n";
-                Result.Text += num2.Print();
-                Result.Text += "=\r\n";
-                Result.Text += res.Print();
-                Result.Text += "------------------\r\n";
+                    Result.Text += num1.Print();
+                    Result.Text += "*\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
+                else
+                {
+                    PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textX1.Text), double.Parse(textBox1.Text));
+                    PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textX2.Text), double.Parse(textBox2.Text));
+
+                    PolarComplexNumber sum = (PolarComplexNumber)(num1 * num2);
+                    ComplexNumber res = sum.ConvertToDekart();
+                    Result.Text += num1.Print();
+                    Result.Text += "*\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
             }
             catch (Exception)
             {
@@ -127,17 +189,34 @@ namespace ComplexNumbersCalculator
         {
             try
             {
-                ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
-                ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
+                if (radioButtonDekart.Checked)
+                {
+                    ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
+                    ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
 
-                ComplexNumber res = num1 / num2;
+                    ComplexNumber res = num1 / num2;
 
-                Result.Text += num1.Print();
-                Result.Text += "/\r\n";
-                Result.Text += num2.Print();
-                Result.Text += "=\r\n";
-                Result.Text += res.Print();
-                Result.Text += "------------------\r\n";
+                    Result.Text += num1.Print();
+                    Result.Text += "/\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
+                else
+                {
+                    PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textX1.Text), double.Parse(textBox1.Text));
+                    PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textX2.Text), double.Parse(textBox2.Text));
+
+                    PolarComplexNumber sum = (PolarComplexNumber)(num1 / num2);
+                    ComplexNumber res = sum.ConvertToDekart();
+                    Result.Text += num1.Print();
+                    Result.Text += "/\r\n";
+                    Result.Text += num2.Print();
+                    Result.Text += "=\r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
             }
             catch (Exception)
             {
@@ -218,17 +297,33 @@ namespace ComplexNumbersCalculator
         {
             try
             {
-                ComplexNumber num = new ComplexNumber(double.Parse(textX.Text), double.Parse(textY.Text));
-                int n = Int32.Parse(textN.Text);
+                if (radioButtonDekart.Checked)
+                {
+                    ComplexNumber num = new ComplexNumber(double.Parse(textX.Text), double.Parse(textY.Text));
+                    int n = Int32.Parse(textN.Text);
 
-                PolarComplexNumber res = new PolarComplexNumber();
-                res = num.ConvertToPolar();
-                res = res.Exponentiation(n);
+                    PolarComplexNumber res = new PolarComplexNumber();
+                    res = num.ConvertToPolar();
+                    res = res.Exponentiation(n);
 
-                Result.Text += num.Print();
-                Result.Text += $"Z^n = \r\n";
-                Result.Text += res.Print();
-                Result.Text += "------------------\r\n";
+                    Result.Text += num.Print();
+                    Result.Text += $"Z^n = \r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
+                else
+                {
+                    PolarComplexNumber num = new PolarComplexNumber(double.Parse(textX.Text), double.Parse(textBox3.Text));
+                    int n = Int32.Parse(textN.Text);
+
+                    PolarComplexNumber res = new PolarComplexNumber();
+                    res = num.Exponentiation(n);
+
+                    Result.Text += num.Print();
+                    Result.Text += $"Z^n = \r\n";
+                    Result.Text += res.Print();
+                    Result.Text += "------------------\r\n";
+                }
             }
             catch (Exception)
             {
@@ -252,16 +347,29 @@ namespace ComplexNumbersCalculator
         {
             try
             {
-                ComplexNumber num = new ComplexNumber(double.Parse(textX.Text), double.Parse(textY.Text));
-                int n = Int32.Parse(textN.Text);
+                if (radioButtonDekart.Checked)
+                {
+                    ComplexNumber num = new ComplexNumber(double.Parse(textX.Text), double.Parse(textY.Text));
+                    int n = Int32.Parse(textN.Text);
 
-                PolarComplexNumber res = new PolarComplexNumber();
-                res = num.ConvertToPolar();
+                    PolarComplexNumber res = new PolarComplexNumber();
+                    res = num.ConvertToPolar();
 
-                Result.Text += num.Print();
-                Result.Text += $"Z^(1/n) = \r\n";
-                Result.Text += res.PrintList(res.Rooting(n));
-                Result.Text += "------------------\r\n";
+                    Result.Text += num.Print();
+                    Result.Text += $"Z^(1/n) = \r\n";
+                    Result.Text += res.PrintList(res.Rooting(n));
+                    Result.Text += "------------------\r\n";
+                }
+                else
+                {
+                    PolarComplexNumber num = new PolarComplexNumber(double.Parse(textX.Text), double.Parse(textBox3.Text));
+                    int n = Int32.Parse(textN.Text);
+
+                    Result.Text += num.Print();
+                    Result.Text += $"Z^(1/n) = \r\n";
+                    Result.Text += num.PrintList(num.Rooting(n));
+                    Result.Text += "------------------\r\n";
+                }
             }
             catch (Exception)
             {
@@ -286,8 +394,8 @@ namespace ComplexNumbersCalculator
             {
                 try
                 {
-                    PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textBox1.Text), double.Parse(textX1.Text));
-                    PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textBox2.Text), double.Parse(textX2.Text));
+                    PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textX1.Text), double.Parse(textBox1.Text));
+                    PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textX2.Text), double.Parse(textBox2.Text));
                 }
                 catch (Exception)
                 {
@@ -302,7 +410,7 @@ namespace ComplexNumbersCalculator
             {
                 try
                 {
-                    PolarComplexNumber num3 = new PolarComplexNumber(double.Parse(textBox3.Text), double.Parse(textX.Text));
+                    PolarComplexNumber num3 = new PolarComplexNumber(double.Parse(textX.Text), double.Parse(textBox3.Text));
                 }
                 catch (Exception)
                 {
@@ -320,9 +428,9 @@ namespace ComplexNumbersCalculator
                 ConvToPolar.Visible = true;
                 
 
-                PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textBox1.Text), double.Parse(textX1.Text));
-                PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textBox2.Text), double.Parse(textX2.Text));
-                PolarComplexNumber num3 = new PolarComplexNumber(double.Parse(textBox3.Text), double.Parse(textX.Text));
+                PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textX1.Text), double.Parse(textBox1.Text));
+                PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textX2.Text), double.Parse(textBox2.Text));
+                PolarComplexNumber num3 = new PolarComplexNumber(double.Parse(textX.Text), double.Parse(textBox3.Text));
 
                 ComplexNumber num4 = num1.ConvertToDekart();
                 ComplexNumber num5 = num2.ConvertToDekart();
@@ -418,9 +526,9 @@ namespace ComplexNumbersCalculator
                 PolarComplexNumber num5 = num2.ConvertToPolar();
                 PolarComplexNumber num6 = num3.ConvertToPolar();
 
-                textBox1.Text = num4.Arg.ToString(); textX1.Text = num4.Module.ToString(); textY1.Text = num4.Module.ToString();
-                textBox2.Text = num5.Arg.ToString(); textX2.Text = num5.Module.ToString(); textY2.Text = num4.Module.ToString();
-                textBox3.Text = num6.Arg.ToString(); textX.Text = num6.Module.ToString(); textY.Text = num6.Module.ToString();
+                textBox1.Text = num4.Module.ToString(); textX1.Text = num4.Arg.ToString(); textY1.Text = num4.Arg.ToString();
+                textBox2.Text = num5.Module.ToString(); textX2.Text = num5.Arg.ToString(); textY2.Text = num4.Arg.ToString();
+                textBox3.Text = num6.Module.ToString(); textX.Text = num6.Arg.ToString(); textY.Text = num6.Arg.ToString();
 
 
                 label1.Text = "Z1 =  r    * (cos(";
@@ -492,6 +600,10 @@ namespace ComplexNumbersCalculator
         private void roundButton1_Click(object sender, EventArgs e)
         {
             Result.Text = "";
+            textN.Text = "";
+            textX1.Text = "0"; textY1.Text = "0"; textBox1.Text = "0";
+            textX2.Text = "0"; textY2.Text = "0"; textBox2.Text = "0";
+            textX.Text = "0"; textY.Text = "0"; textBox3.Text = "0";
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
