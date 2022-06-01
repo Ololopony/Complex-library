@@ -278,14 +278,53 @@ namespace ComplexNumbersCalculator
 
         private void radioButtonDekart_CheckedChanged(object sender, EventArgs e)
         {
-            PolarComplexNumber num1 = new PolarComplexNumber();
-            PolarComplexNumber num2 = new PolarComplexNumber();
-            PolarComplexNumber num3 = new PolarComplexNumber();
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                try
+                {
+                    PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textBox1.Text), double.Parse(textX1.Text));
+                    PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textBox2.Text), double.Parse(textX2.Text));
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Не введены значения");
+                    textX1.Text = "0"; textY1.Text = "0"; textBox1.Text = "0";
+                    textX2.Text = "0"; textY2.Text = "0"; textBox2.Text = "0";
+                    textX.Text = "0"; textY.Text = "0"; textBox3.Text = "0";
+                }
+            }
+            else
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                try
+                {
+                    PolarComplexNumber num3 = new PolarComplexNumber(double.Parse(textBox3.Text), double.Parse(textX.Text));
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Не введены значения");
+                    textX1.Text = "0"; textY1.Text = "0"; textBox1.Text = "0";
+                    textX2.Text = "0"; textY2.Text = "0"; textBox2.Text = "0";
+                    textX.Text = "0"; textY.Text = "0"; textBox3.Text = "0";
+                }
+            }
+
             if (radioButtonDekart.Checked)
             {
-                num1.ConvertToDekart();
-                num2.ConvertToDekart();
-                num3.ConvertToDekart();
+                Module.Visible = true;
+                ConvToPolar.Visible = true;
+                Pass.Visible = false;
+
+                PolarComplexNumber num1 = new PolarComplexNumber(double.Parse(textBox1.Text), double.Parse(textX1.Text));
+                PolarComplexNumber num2 = new PolarComplexNumber(double.Parse(textBox2.Text), double.Parse(textX2.Text));
+                PolarComplexNumber num3 = new PolarComplexNumber(double.Parse(textBox3.Text), double.Parse(textX.Text));
+
+                ComplexNumber num4 = num1.ConvertToDekart();
+                ComplexNumber num5 = num2.ConvertToDekart();
+                ComplexNumber num6 = num3.ConvertToDekart();
+                textX1.Text = num4.X.ToString(); textY1.Text = num4.Y.ToString();
+                textX2.Text = num5.X.ToString(); textY2.Text = num5.Y.ToString();
+                textX.Text = num6.X.ToString(); textY.Text = num6.Y.ToString();
 
                 label1.Text = "Z1 = ";
                 label2.Text = "  + i * ";
@@ -316,17 +355,60 @@ namespace ComplexNumbersCalculator
                 textBox2.Visible = false;
                 textBox3.Visible = false;
             }
+            
+            
         }
         private void radioButtonPolar_CheckedChanged(object sender, EventArgs e)
         {
-            ComplexNumber num1 = new ComplexNumber();
-            ComplexNumber num2 = new ComplexNumber();
-            ComplexNumber num3 = new ComplexNumber();
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                try
+                {
+                    ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
+                    ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Не введены значения");
+                    textX1.Text = "0"; textY1.Text = "0";
+                    textX2.Text = "0"; textY2.Text = "0";
+                    textX.Text = "0"; textY.Text = "0";
+                }
+            }
+            else
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                try
+                {
+                    ComplexNumber num3 = new ComplexNumber(double.Parse(textX.Text), double.Parse(textY.Text));
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Не введены значения");
+                    textX1.Text = "0"; textY1.Text = "0";
+                    textX2.Text = "0"; textY2.Text = "0";
+                    textX.Text = "0"; textY.Text = "0";
+                }
+            }
+
             if (radioButtonPolar.Checked)
             {
-                num1.ConvertToPolar();
-                num2.ConvertToPolar();
-                num3.ConvertToPolar();
+                Module.Visible = false;
+                ConvToPolar.Visible = false;
+                Pass.Visible = true;
+
+                ComplexNumber num1 = new ComplexNumber(double.Parse(textX1.Text), double.Parse(textY1.Text));
+                ComplexNumber num2 = new ComplexNumber(double.Parse(textX2.Text), double.Parse(textY2.Text));
+                ComplexNumber num3 = new ComplexNumber(double.Parse(textX.Text), double.Parse(textY.Text));
+
+                PolarComplexNumber num4 = num1.ConvertToPolar();
+                PolarComplexNumber num5 = num2.ConvertToPolar();
+                PolarComplexNumber num6 = num3.ConvertToPolar();
+
+                textBox1.Text = num4.Arg.ToString(); textX1.Text = num4.Module.ToString(); textY1.Text = num4.Module.ToString();
+                textBox2.Text = num5.Arg.ToString(); textX2.Text = num5.Module.ToString(); textY2.Text = num4.Module.ToString();
+                textBox3.Text = num6.Arg.ToString(); textX.Text = num6.Module.ToString(); textY.Text = num6.Module.ToString();
+
 
                 label1.Text = "Z1 =  r    * (cos(";
                 label2.Text = ")+ sin(";
