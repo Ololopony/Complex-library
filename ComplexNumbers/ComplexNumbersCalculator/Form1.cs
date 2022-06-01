@@ -16,6 +16,10 @@ namespace ComplexNumbersCalculator
         public Calculator()
         {
             InitializeComponent();
+            textX1.BringToFront();
+            textX2.BringToFront();
+            textY1.BringToFront();
+            textY2.BringToFront();
         }
 
         private void Plus_Click(object sender, EventArgs e)
@@ -474,6 +478,11 @@ namespace ComplexNumbersCalculator
         {
             if (radioButtonPolar.Checked)
                 textX.Text = textY.Text;
+        }
+
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+            Result.Text = "";
         }
     }
 }

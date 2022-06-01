@@ -54,6 +54,7 @@ namespace ComplexNumbersCalculator
             this.textY2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Pass = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textN = new System.Windows.Forms.TextBox();
@@ -65,7 +66,7 @@ namespace ComplexNumbersCalculator
             this.radioButtonDekart = new System.Windows.Forms.RadioButton();
             this.radioButtonPolar = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Pass = new System.Windows.Forms.Label();
+            this.roundButton1 = new ComplexNumbersCalculator.RoundButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -75,7 +76,7 @@ namespace ComplexNumbersCalculator
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 11);
+            this.label1.Location = new System.Drawing.Point(2, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 0;
@@ -93,7 +94,7 @@ namespace ComplexNumbersCalculator
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 11);
+            this.label2.Location = new System.Drawing.Point(152, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 17);
             this.label2.TabIndex = 3;
@@ -110,90 +111,122 @@ namespace ComplexNumbersCalculator
             // 
             // Plus
             // 
+            this.Plus.BackColor = System.Drawing.SystemColors.WindowText;
+            this.Plus.FlatAppearance.BorderSize = 0;
+            this.Plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Plus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Plus.Location = new System.Drawing.Point(9, 110);
-            this.Plus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Plus.Margin = new System.Windows.Forms.Padding(0);
             this.Plus.Name = "Plus";
             this.Plus.Size = new System.Drawing.Size(139, 63);
             this.Plus.TabIndex = 0;
             this.Plus.Text = "+";
-            this.Plus.UseVisualStyleBackColor = true;
+            this.Plus.UseVisualStyleBackColor = false;
             this.Plus.Click += new System.EventHandler(this.Plus_Click);
             // 
             // Minus
             // 
+            this.Minus.BackColor = System.Drawing.Color.Black;
+            this.Minus.FlatAppearance.BorderSize = 0;
+            this.Minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Minus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Minus.Location = new System.Drawing.Point(159, 110);
-            this.Minus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Minus.Margin = new System.Windows.Forms.Padding(0);
             this.Minus.Name = "Minus";
             this.Minus.Size = new System.Drawing.Size(139, 63);
             this.Minus.TabIndex = 1;
             this.Minus.Text = "-";
-            this.Minus.UseVisualStyleBackColor = true;
+            this.Minus.UseVisualStyleBackColor = false;
             this.Minus.Click += new System.EventHandler(this.Minus_Click);
             // 
             // Mult
             // 
+            this.Mult.BackColor = System.Drawing.Color.Black;
+            this.Mult.FlatAppearance.BorderSize = 0;
+            this.Mult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Mult.Location = new System.Drawing.Point(9, 187);
-            this.Mult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Mult.Margin = new System.Windows.Forms.Padding(0);
             this.Mult.Name = "Mult";
             this.Mult.Size = new System.Drawing.Size(139, 63);
             this.Mult.TabIndex = 2;
             this.Mult.Text = "*";
-            this.Mult.UseVisualStyleBackColor = true;
+            this.Mult.UseVisualStyleBackColor = false;
             this.Mult.Click += new System.EventHandler(this.Mult_Click);
             // 
             // Division
             // 
+            this.Division.BackColor = System.Drawing.Color.Black;
+            this.Division.FlatAppearance.BorderSize = 0;
+            this.Division.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Division.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Division.Location = new System.Drawing.Point(159, 187);
-            this.Division.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Division.Margin = new System.Windows.Forms.Padding(0);
             this.Division.Name = "Division";
             this.Division.Size = new System.Drawing.Size(139, 63);
             this.Division.TabIndex = 3;
             this.Division.Text = "/";
-            this.Division.UseVisualStyleBackColor = true;
+            this.Division.UseVisualStyleBackColor = false;
             this.Division.Click += new System.EventHandler(this.Division_Click);
             // 
             // Module
             // 
+            this.Module.BackColor = System.Drawing.Color.Black;
+            this.Module.FlatAppearance.BorderSize = 0;
+            this.Module.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Module.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Module.Location = new System.Drawing.Point(16, 183);
             this.Module.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Module.Name = "Module";
             this.Module.Size = new System.Drawing.Size(139, 63);
             this.Module.TabIndex = 4;
             this.Module.Text = "|Z|";
-            this.Module.UseVisualStyleBackColor = true;
+            this.Module.UseVisualStyleBackColor = false;
             this.Module.Click += new System.EventHandler(this.Module_Click);
             // 
             // ConvToPolar
             // 
+            this.ConvToPolar.BackColor = System.Drawing.Color.Black;
+            this.ConvToPolar.FlatAppearance.BorderSize = 0;
+            this.ConvToPolar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConvToPolar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ConvToPolar.Location = new System.Drawing.Point(160, 183);
             this.ConvToPolar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConvToPolar.Name = "ConvToPolar";
             this.ConvToPolar.Size = new System.Drawing.Size(139, 63);
             this.ConvToPolar.TabIndex = 5;
             this.ConvToPolar.Text = "polar";
-            this.ConvToPolar.UseVisualStyleBackColor = true;
+            this.ConvToPolar.UseVisualStyleBackColor = false;
             this.ConvToPolar.Click += new System.EventHandler(this.ConvToPolar_Click);
             // 
             // Expon
             // 
+            this.Expon.BackColor = System.Drawing.Color.Black;
+            this.Expon.FlatAppearance.BorderSize = 0;
+            this.Expon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Expon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Expon.Location = new System.Drawing.Point(16, 110);
             this.Expon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Expon.Name = "Expon";
             this.Expon.Size = new System.Drawing.Size(139, 63);
             this.Expon.TabIndex = 6;
             this.Expon.Text = "Z^n";
-            this.Expon.UseVisualStyleBackColor = true;
+            this.Expon.UseVisualStyleBackColor = false;
             this.Expon.Click += new System.EventHandler(this.Expon_Click);
             // 
             // Rooting
             // 
+            this.Rooting.BackColor = System.Drawing.Color.Black;
+            this.Rooting.FlatAppearance.BorderSize = 0;
+            this.Rooting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Rooting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Rooting.Location = new System.Drawing.Point(160, 110);
             this.Rooting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Rooting.Name = "Rooting";
             this.Rooting.Size = new System.Drawing.Size(139, 63);
             this.Rooting.TabIndex = 7;
             this.Rooting.Text = "Z^(1/n)";
-            this.Rooting.UseVisualStyleBackColor = true;
+            this.Rooting.UseVisualStyleBackColor = false;
             this.Rooting.Click += new System.EventHandler(this.Rooting_Click);
             // 
             // Result
@@ -228,6 +261,7 @@ namespace ComplexNumbersCalculator
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label10);
@@ -245,18 +279,16 @@ namespace ComplexNumbersCalculator
             this.tabPage1.Controls.Add(this.Plus);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Size = new System.Drawing.Size(315, 256);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Бинарные операции";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(40, 57);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(23, 22);
             this.textBox2.TabIndex = 12;
@@ -265,7 +297,7 @@ namespace ComplexNumbersCalculator
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(40, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(23, 22);
             this.textBox1.TabIndex = 10;
@@ -274,7 +306,7 @@ namespace ComplexNumbersCalculator
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(297, 60);
+            this.label10.Location = new System.Drawing.Point(294, 58);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 17);
             this.label10.TabIndex = 11;
@@ -282,7 +314,7 @@ namespace ComplexNumbersCalculator
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(297, 11);
+            this.label9.Location = new System.Drawing.Point(294, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 17);
             this.label9.TabIndex = 10;
@@ -290,7 +322,7 @@ namespace ComplexNumbersCalculator
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 60);
+            this.label4.Location = new System.Drawing.Point(2, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 5;
@@ -317,7 +349,7 @@ namespace ComplexNumbersCalculator
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(155, 60);
+            this.label5.Location = new System.Drawing.Point(152, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 7;
@@ -325,6 +357,7 @@ namespace ComplexNumbersCalculator
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
             this.tabPage2.Controls.Add(this.Pass);
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.label11);
@@ -345,12 +378,22 @@ namespace ComplexNumbersCalculator
             this.tabPage2.Size = new System.Drawing.Size(315, 256);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Унарные операции";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Pass
+            // 
+            this.Pass.AutoSize = true;
+            this.Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Pass.Location = new System.Drawing.Point(5, 196);
+            this.Pass.Name = "Pass";
+            this.Pass.Size = new System.Drawing.Size(307, 29);
+            this.Pass.TabIndex = 10;
+            this.Pass.Text = "Фирменная заглушка ТМ";
+            this.Pass.Visible = false;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(36, 14);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(19, 22);
             this.textBox3.TabIndex = 10;
@@ -367,7 +410,7 @@ namespace ComplexNumbersCalculator
             // 
             // textN
             // 
-            this.textN.Location = new System.Drawing.Point(53, 58);
+            this.textN.Location = new System.Drawing.Point(53, 59);
             this.textN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textN.Name = "textN";
             this.textN.Size = new System.Drawing.Size(100, 22);
@@ -421,7 +464,8 @@ namespace ComplexNumbersCalculator
             // radioButtonDekart
             // 
             this.radioButtonDekart.AutoSize = true;
-            this.radioButtonDekart.Location = new System.Drawing.Point(19, 11);
+            this.radioButtonDekart.Checked = true;
+            this.radioButtonDekart.Location = new System.Drawing.Point(6, 13);
             this.radioButtonDekart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonDekart.Name = "radioButtonDekart";
             this.radioButtonDekart.Size = new System.Drawing.Size(187, 21);
@@ -434,7 +478,7 @@ namespace ComplexNumbersCalculator
             // radioButtonPolar
             // 
             this.radioButtonPolar.AutoSize = true;
-            this.radioButtonPolar.Location = new System.Drawing.Point(19, 38);
+            this.radioButtonPolar.Location = new System.Drawing.Point(6, 38);
             this.radioButtonPolar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonPolar.Name = "radioButtonPolar";
             this.radioButtonPolar.Size = new System.Drawing.Size(181, 21);
@@ -448,30 +492,35 @@ namespace ComplexNumbersCalculator
             // 
             this.groupBox1.Controls.Add(this.radioButtonDekart);
             this.groupBox1.Controls.Add(this.radioButtonPolar);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(12, 311);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(323, 74);
+            this.groupBox1.Size = new System.Drawing.Size(238, 74);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
-            // Pass
+            // roundButton1
             // 
-            this.Pass.AutoSize = true;
-            this.Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Pass.Location = new System.Drawing.Point(5, 196);
-            this.Pass.Name = "Pass";
-            this.Pass.Size = new System.Drawing.Size(307, 29);
-            this.Pass.TabIndex = 10;
-            this.Pass.Text = "Фирменная заглушка ТМ";
-            this.Pass.Visible = false;
+            this.roundButton1.BackColor = System.Drawing.Color.DarkOrange;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Location = new System.Drawing.Point(256, 311);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(75, 75);
+            this.roundButton1.TabIndex = 10;
+            this.roundButton1.Text = "Clear";
+            this.roundButton1.UseVisualStyleBackColor = false;
+            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(731, 398);
+            this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
@@ -531,6 +580,7 @@ namespace ComplexNumbersCalculator
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label Pass;
+        private RoundButton roundButton1;
     }
 }
 
