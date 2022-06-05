@@ -20,6 +20,8 @@ namespace ComplexNumbersCalculator
             textX2.BringToFront();
             textY1.BringToFront();
             textY2.BringToFront();
+            textX.BringToFront();
+            textY.BringToFront();
             textX1.Text = "0"; textY1.Text = "0"; textBox1.Text = "0";
             textX2.Text = "0"; textY2.Text = "0"; textBox2.Text = "0";
             textX.Text = "0"; textY.Text = "0"; textBox3.Text = "0";
@@ -532,19 +534,19 @@ namespace ComplexNumbersCalculator
 
 
                 label1.Text = "Z1 =  r    * (cos(";
-                label2.Text = ")+ sin(";
+                label2.Text = ")+ i*sin(";
                 textX1.Size = new Size(35, 22);
                 textY1.Size = new Size(76, 22);
                 textX1.Location = new Point(81, 6);
 
                 label4.Text = "Z2 =  r    * (cos(";
-                label5.Text = ")+ sin(";
+                label5.Text = ")+ i*sin(";
                 textX2.Size = new Size(35, 22);
                 textY2.Size = new Size(76, 22);
                 textX2.Location = new Point(81, 46);
 
                 label7.Text = "Z =  r    * (cos(";
-                label6.Text = ")+ sin(";
+                label6.Text = ")+ i*sin(";
                 textX.Size = new Size(44, 20);
                 textY.Size = new Size(76, 20);
                 textX.Location = new Point(74, 11);

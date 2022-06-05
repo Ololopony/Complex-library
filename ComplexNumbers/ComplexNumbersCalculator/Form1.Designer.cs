@@ -86,7 +86,7 @@ namespace ComplexNumbersCalculator
             // textX1
             // 
             this.textX1.Location = new System.Drawing.Point(40, 6);
-            this.textX1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textX1.Margin = new System.Windows.Forms.Padding(2);
             this.textX1.Name = "textX1";
             this.textX1.Size = new System.Drawing.Size(76, 20);
             this.textX1.TabIndex = 1;
@@ -105,7 +105,7 @@ namespace ComplexNumbersCalculator
             // textY1
             // 
             this.textY1.Location = new System.Drawing.Point(147, 6);
-            this.textY1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textY1.Margin = new System.Windows.Forms.Padding(2);
             this.textY1.Name = "textY1";
             this.textY1.Size = new System.Drawing.Size(76, 20);
             this.textY1.TabIndex = 4;
@@ -178,7 +178,7 @@ namespace ComplexNumbersCalculator
             this.Module.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Module.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Module.Location = new System.Drawing.Point(12, 149);
-            this.Module.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Module.Margin = new System.Windows.Forms.Padding(2);
             this.Module.Name = "Module";
             this.Module.Size = new System.Drawing.Size(104, 51);
             this.Module.TabIndex = 4;
@@ -193,7 +193,7 @@ namespace ComplexNumbersCalculator
             this.ConvToPolar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConvToPolar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ConvToPolar.Location = new System.Drawing.Point(120, 149);
-            this.ConvToPolar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConvToPolar.Margin = new System.Windows.Forms.Padding(2);
             this.ConvToPolar.Name = "ConvToPolar";
             this.ConvToPolar.Size = new System.Drawing.Size(104, 51);
             this.ConvToPolar.TabIndex = 5;
@@ -208,7 +208,7 @@ namespace ComplexNumbersCalculator
             this.Expon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Expon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Expon.Location = new System.Drawing.Point(12, 89);
-            this.Expon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Expon.Margin = new System.Windows.Forms.Padding(2);
             this.Expon.Name = "Expon";
             this.Expon.Size = new System.Drawing.Size(104, 51);
             this.Expon.TabIndex = 6;
@@ -223,7 +223,7 @@ namespace ComplexNumbersCalculator
             this.Rooting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Rooting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Rooting.Location = new System.Drawing.Point(120, 89);
-            this.Rooting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rooting.Margin = new System.Windows.Forms.Padding(2);
             this.Rooting.Name = "Rooting";
             this.Rooting.Size = new System.Drawing.Size(104, 51);
             this.Rooting.TabIndex = 7;
@@ -234,7 +234,7 @@ namespace ComplexNumbersCalculator
             // Result
             // 
             this.Result.Location = new System.Drawing.Point(269, 34);
-            this.Result.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Result.Margin = new System.Windows.Forms.Padding(2);
             this.Result.Multiline = true;
             this.Result.Name = "Result";
             this.Result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -257,7 +257,7 @@ namespace ComplexNumbersCalculator
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(9, 18);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(242, 231);
@@ -337,7 +337,7 @@ namespace ComplexNumbersCalculator
             // textX2
             // 
             this.textX2.Location = new System.Drawing.Point(40, 46);
-            this.textX2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textX2.Margin = new System.Windows.Forms.Padding(2);
             this.textX2.Name = "textX2";
             this.textX2.Size = new System.Drawing.Size(76, 20);
             this.textX2.TabIndex = 6;
@@ -346,7 +346,7 @@ namespace ComplexNumbersCalculator
             // textY2
             // 
             this.textY2.Location = new System.Drawing.Point(147, 46);
-            this.textY2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textY2.Margin = new System.Windows.Forms.Padding(2);
             this.textY2.Name = "textY2";
             this.textY2.Size = new System.Drawing.Size(76, 20);
             this.textY2.TabIndex = 8;
@@ -378,9 +378,9 @@ namespace ComplexNumbersCalculator
             this.tabPage2.Controls.Add(this.textX);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(234, 205);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Унарные операции";
@@ -404,7 +404,7 @@ namespace ComplexNumbersCalculator
             // textN
             // 
             this.textN.Location = new System.Drawing.Point(40, 48);
-            this.textN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textN.Margin = new System.Windows.Forms.Padding(2);
             this.textN.Name = "textN";
             this.textN.Size = new System.Drawing.Size(76, 20);
             this.textN.TabIndex = 10;
@@ -421,8 +421,8 @@ namespace ComplexNumbersCalculator
             // 
             // textY
             // 
-            this.textY.Location = new System.Drawing.Point(144, 11);
-            this.textY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textY.Location = new System.Drawing.Point(148, 11);
+            this.textY.Margin = new System.Windows.Forms.Padding(2);
             this.textY.Name = "textY";
             this.textY.Size = new System.Drawing.Size(76, 20);
             this.textY.TabIndex = 8;
@@ -431,7 +431,7 @@ namespace ComplexNumbersCalculator
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(119, 13);
+            this.label6.Location = new System.Drawing.Point(115, 14);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(25, 13);
@@ -441,7 +441,7 @@ namespace ComplexNumbersCalculator
             // textX
             // 
             this.textX.Location = new System.Drawing.Point(40, 11);
-            this.textX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textX.Margin = new System.Windows.Forms.Padding(2);
             this.textX.Name = "textX";
             this.textX.Size = new System.Drawing.Size(76, 20);
             this.textX.TabIndex = 6;
@@ -462,7 +462,7 @@ namespace ComplexNumbersCalculator
             this.radioButtonDekart.AutoSize = true;
             this.radioButtonDekart.Checked = true;
             this.radioButtonDekart.Location = new System.Drawing.Point(4, 11);
-            this.radioButtonDekart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonDekart.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonDekart.Name = "radioButtonDekart";
             this.radioButtonDekart.Size = new System.Drawing.Size(147, 17);
             this.radioButtonDekart.TabIndex = 7;
@@ -475,7 +475,7 @@ namespace ComplexNumbersCalculator
             // 
             this.radioButtonPolar.AutoSize = true;
             this.radioButtonPolar.Location = new System.Drawing.Point(4, 31);
-            this.radioButtonPolar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonPolar.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPolar.Name = "radioButtonPolar";
             this.radioButtonPolar.Size = new System.Drawing.Size(141, 17);
             this.radioButtonPolar.TabIndex = 8;
@@ -492,7 +492,7 @@ namespace ComplexNumbersCalculator
             this.groupBox1.Location = new System.Drawing.Point(9, 253);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(178, 60);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
@@ -524,7 +524,7 @@ namespace ComplexNumbersCalculator
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Result);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";

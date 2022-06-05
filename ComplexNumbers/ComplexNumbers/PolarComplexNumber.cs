@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComplexNumbers
 {
-    public class PolarComplexNumber:ComplexNumber, ICloneable
+    public class PolarComplexNumber: ComplexNumber, ICloneable
     {
         public double Arg { get; set; }
         public double Module { get; set; }

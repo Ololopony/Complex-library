@@ -16,7 +16,6 @@ D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumb
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbersCalculator.pdb
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbers.dll
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\bin\Debug\ComplexNumbers.pdb
-D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csprojAssemblyReference.cache
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.Calculator.resources
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.Properties.Resources.resources
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csproj.GenerateResource.cache
@@ -24,3 +23,4 @@ D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumb
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csproj.CopyComplete
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.exe
 D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.pdb
+D:\Complex-library\ComplexNumbers\ComplexNumbersCalculator\obj\Debug\ComplexNumbersCalculator.csproj.AssemblyReference.cache

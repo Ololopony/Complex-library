@@ -6,7 +6,7 @@ C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbers\obj\Debug\Compl
 C:\Users\Professional\source\repos\ComplexNumbers\ComplexNumbers\obj\Debug\ComplexNumbers.pdb
 D:\Complex-library\ComplexNumbers\ComplexNumbers\bin\Debug\ComplexNumbers.dll
 D:\Complex-library\ComplexNumbers\ComplexNumbers\bin\Debug\ComplexNumbers.pdb
-D:\Complex-library\ComplexNumbers\ComplexNumbers\obj\Debug\ComplexNumbers.csprojAssemblyReference.cache
 D:\Complex-library\ComplexNumbers\ComplexNumbers\obj\Debug\ComplexNumbers.csproj.CoreCompileInputs.cache
 D:\Complex-library\ComplexNumbers\ComplexNumbers\obj\Debug\ComplexNumbers.dll
 D:\Complex-library\ComplexNumbers\ComplexNumbers\obj\Debug\ComplexNumbers.pdb
+D:\Complex-library\ComplexNumbers\ComplexNumbers\obj\Debug\ComplexNumbers.csproj.AssemblyReference.cache
